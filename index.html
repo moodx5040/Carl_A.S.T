@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ســـَــايــِــلــِــنْــس 💎</title>
+<link rel="icon" href="logo.jpg">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+:root{
+  --main-crystal:#4dd0e1;
+  --hover-crystal:#81d4fa;
+  --dark-bg:#0a1f2c;
+  --card-bg:#0d3c4a;
+  --card-border:#4dd0e1;
+  --card-hover-bg:#147c96;
+  --card-hover-border:#81d4fa;
+  --text-muted:#cce7f0;
+  --footer-text:#cce7f0;
+  --footer-border:#4dd0e1;
+}
+
+body{
+  margin:0;
+  font-family:'Tajawal',sans-serif;
+  background:var(--dark-bg);
+  color:var(--main-crystal);
+}
+
+.dark-mode{background:var(--dark-bg);color:var(--main-crystal);}
+.light-mode{background:#e0f7fa;color:#004d40;}
+
+header{
+  text-align:center;
+  padding:30px 20px 40px;
+  border-bottom:3px solid var(--main-crystal);
+}
+
+/* الأزرار */
+.top-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.main-button{
+  padding:10px 20px;
+  background:var(--main-crystal);
+  color:#000;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+.main-button:hover{
+  transform:scale(1.05);
+  background:var(--hover-crystal);
+}
+
+/* مربع المقدمة */
+.intro-box{
+  max-width:900px;
+  margin:20px auto;
+  border:2px solid var(--main-crystal);
+  border-radius:14px;
+  overflow:hidden;
+}
+.intro-box img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+/* المحتوى */
+.container{max-width:1200px;margin:auto;padding:40px 20px}
+
+.rank-category{text-align:center;margin-bottom:60px}
+.rank-category h2{font-size:2em;margin-bottom:25px;color:var(--main-crystal);}
+
+.ranks-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.rank-card{
+  background:var(--card-bg);
+  border:2px solid var(--card-border);
+  padding:15px;
+  border-radius:12px;
+  transition:.3s;
+}
+.rank-card:hover{
+  transform:translateY(-6px);
+  background:var(--card-hover-bg);
+  border-color:var(--card-hover-border);
+}
+
+.rank-image{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:10px;
+  border:2px solid var(--main-crystal);
+}
+
+.rank-title{margin:10px 0;font-size:1.4em;color:var(--main-crystal);}
+.rank-desc{color:var(--text-muted);}
+.rank-more{display:none;color:var(--text-muted);margin-top:8px}
+
+.show-more-btn{
+  margin-top:10px;
+  background:transparent;
+  border:1px solid var(--main-crystal);
+  color:var(--main-crystal);
+  padding:6px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.show-more-btn:hover{
+  background:var(--main-crystal);
+  color:#000;
+}
+
+/* زر الوضع */
+.toggle-mode{
+  position:fixed;
+  top:15px;
+  left:15px;
+  background:var(--main-crystal);
+  color:#000;
+  border:none;
+  padding:8px 15px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* الفوتر */
+footer{
+  text-align:center;
+  padding:20px;
+  border-top:1px solid var(--footer-border);
+  color:var(--footer-text);
+}
+.footer-content{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+.footer-logo{
+  width:22px;
+  height:22px;
+}
+</style>
+</head>
+
+<body class="dark-mode">
+
+<button class="toggle-mode" onclick="toggleMode()" id="mode-toggle">
+<i class="fas fa-moon"></i> وضع مظلم
+</button>
+
+<header>
+  <h1>إقليم سايلنس</h1>
+
+  <div class="top-buttons">
+    <a href="النقابات.html" class="main-button">النقابات</a>
+    <a href="الانجازات.html" class="main-button">الإنجازات</a>
+    <a href="القوانين.html" class="main-button">القوانين</a>
+    <a href="التصنيفات.html" class="main-button">التصنيفات</a>
+  </div>
+
+  <div class="intro-box">
+    <img src="بروفايل.jpg">
+  </div>
+</header>
+
+<div class="container">
+
+<!-- القيادة -->
+<div class="rank-category" data-aos="fade-up">
+<h2>👑 الرتب العاليا سايلنس</h2>
+<div class="ranks-grid">
+
+<div class="rank-card">
+<img src="الملك.jpg" class="rank-image">
+<h3 class="rank-title">الملك</h3>
+<p class="rank-desc">سوبارو</p>
+<p class="rank-more">مسوول الاول لإقليم سايلنس 💎 بالكامل</p>
+<button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button>
+</div>
+
+<div class="rank-card">
+<img src="نائب.jpg" class="rank-image">
+<h3 class="rank-title">نائب الملك</h3>
+<p class="rank-desc">يامي</p>
+<p class="rank-more">مساعد الملك الاول والمسؤول الثاني عن إقليم سايلنس</p>
+<button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button>
+</div>
+
+<div class="rank-card">
+<img src="الوزير.jpg" class="rank-image">
+<h3 class="rank-title">الوزير</h3>
+<p class="rank-desc">اينوسكي</p>
+<p class="rank-more">المساعد الثاني للملك و صاحب المسؤولية بعد المساعد الاول</p>
+<button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button>
+</div>
+
+</div>
+</div>
+
+<!-- الدوقات -->
+<div class="rank-category" data-aos="fade-up">
+<h2>🏰 الدوقات</h2>
+<div class="ranks-grid">
+
+<div class="rank-card">
+<img src="شوتو.jpg" class="rank-image">
+<h3 class="rank-title">الدوق</h3>
+<p class="rank-desc">شوتو</p>
+<p class="rank-more">المسؤول عن النقابات التالية ﴾🔮 ـ 🪽﴿</p>
+<button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button>
+</div>
+
+<div class="rank-card">
+<img src="لويد.jpg" class="rank-image">
+<h3 class="rank-title">الدوق</h3>
+<p class="rank-desc">لويد</p>
+<p class="rank-more">المسؤول عن النقابات التالية ﴾🦁 ـ 🎼﴿</p>
+<button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button>
+</div>
+
+</div>
+</div>
+
+<!-- الأدميرالات -->
+<div class="rank-category" data-aos="fade-up">
+<h2>🎓 الأدميرالات</h2>
+<div class="ranks-grid">
+
+<div class="rank-card"><img src="كيلوا.jpg" class="rank-image"><h3 class="rank-title">ادميرال</h3><p class="rank-desc">كيلوا</p><p class="rank-more">مسؤول عن نقابة كاريون </p><button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button></div>
+<div class="rank-card"><img src="كاشيمو.jpg" class="rank-image"><h3 class="rank-title">ادميرال</h3><p class="rank-desc">كاشيمو</p><p class="rank-more">مسوول عن نقابة كاريوكي 🎼</p><button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button></div>
+<div class="rank-card"><img src="موسكو.jpg" class="rank-image"><h3 class="rank-title">ادميرال</h3><p class="rank-desc">شاغر</p><p class="rank-more">لايوجد مسوول حاليا على نقابة موسكو 🌧️</p><button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button></div>
+<div class="rank-card"><img src="سلور.jpg" class="rank-image"><h3 class="rank-title">ادميرال</h3><p class="rank-desc">سلور</p><p class="rank-more">مسوول عن نقابة أسبادا 🌪️</p><button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button></div>
+<div class="rank-card"><img src="لوكي.jpg" class="rank-image"><h3 class="rank-title">ادميرال</h3><p class="rank-desc">لوكي</p><p class="rank-more">مسوول عن نقابة اثينا 🔮</p><button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button></div>
+<div class="rank-card"><img src="لوفي.jpg" class="rank-image"><h3 class="rank-title">ادميرال</h3><p class="rank-desc">لوفي</p><p class="rank-more">مسوول عن نقابة الدنيا 🪽</p><button class="show-more-btn" onclick="toggleMore(this)">عرض المزيد</button></div>
+
+</div>
+</div>
+
+</div>
+
+<footer>
+  <div class="footer-content">
+    <img src="كارل.png" class="footer-logo">
+    <span>© 2025 اقليم سايلنس - جميع الحقوق محفوظة</span>
+  </div>
+  <div>مع تحيات المبرمج كارل</div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+function toggleMore(btn){
+  const more=btn.parentElement.querySelector('.rank-more');
+  more.style.display=more.style.display==="block"?"none":"block";
+  btn.textContent=more.style.display==="block"?"إخفاء":"عرض المزيد";
+}
+
+function toggleMode(){
+  document.body.classList.toggle("light-mode");
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
