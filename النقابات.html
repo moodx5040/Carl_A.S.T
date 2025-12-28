@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="refresh" content="200">
+  <link rel="icon" href="لوغو%20.jpg" type="image/png">
+  <title>صفحة نقابات إقليم سايلنس</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css " />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* =================== */
+    /* == ألوان التصميم == */
+    /* =================== */
+
+    :root {
+      --main-crystal: #4dd0e1; /* أزرق كرستالي */
+      --hover-crystal: #81d4fa; /* أزرق فاتح عند hover */
+      --dark-bg: #0a1f2c; /* خلفية داكنة كالكريستال */
+      --card-bg: #0d3c4a;
+      --card-hover-bg: #147c96;
+      --card-border: #4dd0e1;
+      --card-hover-border: #81d4fa;
+      --text-muted: #cce7f0;
+      --footer-text: #cce7f0;
+      --footer-border: #4dd0e1;
+    }
+
+    /* الخط العام */
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--main-crystal);
+      transition: all 0.4s ease;
+    }
+
+    .dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--main-crystal);
+    }
+
+    .light-mode {
+      background-color: #e0f7fa;
+      color: #004d40;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      background: linear-gradient(to bottom, #052f3b 60%, #0a1f2c);
+      border-bottom: 3px solid var(--main-crystal);
+      box-shadow: 0 4px 10px rgba(77, 208, 225, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--main-crystal);
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #cce7f0;
+    }
+
+    /* زر تبديل الوضع - ثابت */
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      padding: 10px 18px;
+      background-color: var(--main-crystal);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(77, 208, 225, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toggle-mode:hover {
+      background-color: var(--hover-crystal);
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .intro-section {
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 0 20px;
+    }
+
+    .intro-section h2 {
+      font-size: 2.2em;
+      color: var(--main-crystal);
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: auto;
+      color: #cce7f0;
+      line-height: 1.7;
+    }
+
+    .rank-category {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .rank-category h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--main-crystal);
+    }
+
+    .ranks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .rank-card {
+      background-color: var(--card-bg);
+      border: 2px solid var(--card-border);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(77, 208, 225, 0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+      position: relative;
+    }
+
+    .rank-card:hover {
+      transform: translateY(-6px);
+      background-color: var(--card-hover-bg);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 8px 20px rgba(77, 208, 225, 0.2);
+    }
+
+    .rank-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border: 2px solid var(--main-crystal);
+    }
+
+    .rank-title {
+      font-size: 1.4em;
+      color: var(--main-crystal);
+      margin: 0;
+    }
+
+    .rank-desc {
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: var(--text-muted);
+    }
+
+    .show-more-btn {
+      margin-top: 10px;
+      display: inline-block;
+      background-color: transparent;
+      border: 1px solid var(--main-crystal);
+      color: var(--main-crystal);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: 0.3s ease;
+    }
+
+    .show-more-btn:hover {
+      background-color: var(--main-crystal);
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: var(--footer-text);
+      border-top: 1px solid var(--footer-border);
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .home-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--main-crystal);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(77, 208, 225, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: var(--hover-crystal);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="dark-mode" data-aos-easing="ease" data-aos-duration="600" data-aos-delay="0">
+  <header>
+    <h1>هنا توجد جميع نقابات إقليم سايلنس </h1>
+    <p>يتقسم اقليم سايلنس إلى عدة نقابات و في هذه الصفحة توجد جميع نقابات الاقليم و تتجاوز نقابات ما يقارب 6+ نقابه</p>
+     <!-- زر الصفحة الرئيسية -->
+   <div style="margin-top: 20px;">
+    <a href="index.html" class="home-button">
+      <i class="fas fa-home"></i> الصفحة الرئيسية
+    </a>
+  </div>
+</header>
+
+<!-- زر تبديل الوضع -->
+<button class="toggle-mode" onclick="toggleMode()" id="mode-toggle">
+  <i class="fas fa-moon"></i> وضع مظلم
+</button>
+
+<div class="container">
+<!-- قسم النقابات - أول 6 نقابات فقط -->
+<div class="rank-category" data-aos="fade-up">
+  <h2>نقابات إقليم سايلنس 💎:</h2>
+  <p style="margin-bottom: 30px; font-size: 1em;">بجانب كل اسم نقابه شعار يرمز لها لكي تتميز فيه عن غيرها</p>
+  <div class="ranks-grid">
+
+    <!-- 1. كاريون -->
+    <div class="rank-card" data-aos="fade-up">
+      <h3 class="rank-title">❒ كاريون 🦁</h3>
+    </div>
+
+    <!-- 2. كاريوكي -->
+    <div class="rank-card" data-aos="fade-up">
+      <h3 class="rank-title">❒ كاريوكي 🎼</h3>
+    </div>
+
+    <!-- 3. موسكو -->
+    <div class="rank-card" data-aos="fade-up">
+      <h3 class="rank-title">❒ موسكو 🌧️</h3>
+    </div>
+
+    <!-- 4. اسبادا -->
+    <div class="rank-card" data-aos="fade-up">
+      <h3 class="rank-title">❒ اسبادا 🌪️</h3>
+    </div>
+
+    <!-- 5. اثينا -->
+    <div class="rank-card" data-aos="fade-up">
+      <h3 class="rank-title">❒ اثينا 🔮</h3>
+    </div>
+
+    <!-- 6. الديا -->
+    <div class="rank-card" data-aos="fade-up">
+      <h3 class="rank-title">❒ الديا 🪽</h3>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 متجر إقليم سايلنس - جميع الحقوق محفوظة
+  <img src="كارل.jpg" alt="Logo" style="width:20px;height:20px;">
+  <br>
+  مع تحيات المبرمج كارل 
+</footer>
+
+<!-- JavaScript -->
+<script src=" https://unpkg.com/aos @2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  function toggleMode() {
+    const body = document.body;
+    const icon = document.querySelector('#mode-toggle i');
+    const label = document.querySelector('#mode-toggle');
+    if (body.classList.contains("dark-mode")) {
+      body.classList.remove("dark-mode");
+      body.classList.add("light-mode");
+      icon.className = "fas fa-sun";
+      label.innerHTML = '<i class="fas fa-sun"></i> وضع نهاري';
+    } else {
+      body.classList.remove("light-mode");
+      body.classList.add("dark-mode");
+      icon.className = "fas fa-moon";
+      label.innerHTML = '<i class="fas fa-moon"></i> وضع مظلم';
+    }
+  }
+</script>
+</body>
+</html>

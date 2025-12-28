@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="لوغو%20.jpg" type="image/png">
+  <title>تصنيفات إقليم سايلنس</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --main-gold: #00ffff; /* اللون الكرستالي */
+      --hover-gold: #00e6e6;
+      --dark-bg: #0d0d0d;
+      --card-bg: #121212;
+      --card-hover-bg: #1c1c1c;
+      --card-border: #00ffff;
+      --card-hover-border: #00e6e6cc;
+      --text-muted: #bbb;
+      --footer-text: #aaa;
+      --footer-border: #444;
+    }
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--main-gold);
+      transition: all 0.4s ease;
+    }
+    .dark-mode { background-color: var(--dark-bg); color: var(--main-gold); }
+    .light-mode { background-color: #f9f9f9; color: #333; }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(to bottom, #111 60%, #1a1a1a);
+      border-bottom: 3px solid var(--main-gold);
+      box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
+    }
+    header h1 { font-size: 2.8em; margin: 0; letter-spacing: 2px; text-shadow: 0 0 10px var(--main-gold); }
+    header p { margin-top: 15px; font-size: 1.2em; max-width: 800px; margin-left: auto; margin-right: auto; color: #ccc; }
+
+    .toggle-mode {
+      position: fixed; top: 20px; left: 20px; z-index: 1001;
+      padding: 10px 18px; background-color: var(--main-gold);
+      color: #000; border: none; border-radius: 8px; cursor: pointer;
+      font-weight: bold; display: flex; align-items: center; gap: 8px;
+    }
+    .toggle-mode:hover { background-color: var(--hover-gold); transform: scale(1.05); }
+
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+
+    .levels-section { margin-bottom: 60px; padding: 0 20px; }
+    .level-item {
+      background-color: var(--card-bg); border: 2px solid var(--card-border);
+      border-radius: 12px; padding: 18px 24px; margin-bottom: 18px;
+      box-shadow: 0 6px 16px rgba(0,255,255,0.08); transition: all 0.3s ease;
+    }
+    .level-item:hover {
+      transform: translateY(-4px); background-color: var(--card-hover-bg);
+      border-color: var(--card-hover-border); box-shadow: 0 8px 20px rgba(0,255,255,0.2);
+    }
+    .level-title { color: var(--main-gold); font-weight: bold; font-size: 1.1em; }
+    .level-desc { margin-top: 8px; font-size: 0.95em; color: var(--text-muted); }
+
+    footer {
+      text-align: center; padding: 20px; font-size: 14px;
+      color: var(--footer-text); border-top: 1px solid var(--footer-border);
+      margin-top: 60px; display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
+    footer img { width: 24px; height: 24px; }
+
+    .home-button {
+      display: inline-block; padding: 10px 20px;
+      background-color: var(--main-gold); color: #000; text-decoration: none;
+      border-radius: 8px; font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,255,255,0.3);
+      transition: all 0.3s ease;
+    }
+    .home-button:hover { background-color: var(--hover-gold); transform: scale(1.05); }
+  </style>
+</head>
+<body class="dark-mode">
+  <header>
+    <h1>『نظام تصنيفات نقابات مملكة نيفيريا ❄️』</h1>
+    <p>❃━━━━═✦•〘•❄️•〙•✦═━━━━❃</p>
+    <div style="margin-top: 20px;">
+      <a href="index.html" class="home-button">
+        <i class="fas fa-home"></i> الصفحة الرئيسية
+      </a>
+    </div>
+  </header>
+
+  <button class="toggle-mode" onclick="toggleMode()" id="mode-toggle">
+    <i class="fas fa-moon"></i> وضع مظلم
+  </button>
+
+  <div class="container">
+    <div class="levels-section">
+      <!-- تصنيفات النقابات -->
+      <div class="level-item">
+        <div class="level-title">〘•تصنيف  𝑭•〙</div>
+        <div class="level-desc">『يكون لكل نقابه غير رسميه أقل من 100 عضو وتفاعلهم لا يتجاوز ال 12K لا توجد لهم اي صلاحيات الين ما يصيرون نقابة رسميه』</div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">〘•تصنيف  𝑬•〙</div>
+        <div class="level-desc">+1 زيــادة فـࢪع للنقــابــه 🚨<br>『لكل نقابه رسميه جديده شروط الوصول للتصنيف هو +120 عضو و +30 نشر يومي +8 مشرفين و +12 ألف تفاعل』</div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">〘•تصنيف  𝑪•〙</div>
+        <div class="level-desc">『تصنيف النقابات المتوسطه شروط التصنيف وصول النقابه ل  +150 عضو ، +12 مشرف ، +35 نشر،=+15 ألف تفاعل』</div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">〘•تصنيف  𝑩•〙</div>
+        <div class="level-desc">+1 زيــادة فـࢪع للنقــابــه 🚨<br>『تصنيف النقابات الجيده جدا شروط الوصول للتصنيف ذا +180 عضو ، +15 مشرف ، +40 نشر ، تفاعل فوق 17K』</div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">〘•تصنيف  𝑨•〙</div>
+        <div class="level-desc">+2 زيــادة فـࢪع للنقــابــه 🚨<br>『تصنيف A شروط الوصول لهذا التصنيف تكون النقابه +200 عضو ، +18 مشرف ، +50 نشر ، تفاعل فوق 20K ، مع توزيع رواتب لمن فوق الاسبادا』</div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">〘•تصنيف  𝑺•〙</div>
+        <div class="level-desc">+3 زيــادة فـࢪع للنقــابــه 🚨<br>『اعلي تصنيف ،شروط الوصول لهذا التصنيف +250 عضو، تفاعل +25 الف ، نشر +70 يوميآ، +25 مشرف حقيقي ، يتم وضع نجمة بجانب اسم النقابه بالتلاميذ وتوزيع رواتب علي جميع مشرفين النقابه』</div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">〄↫ الملك: سوبارو 👑</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 إقليم سايلنس- جميع الحقوق محفوظة
+    <img src="كارل.jpg" alt="لوغو">
+    <br>
+    مع تحيات المبرمج كارل
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMode() {
+      const body = document.body;
+      const icon = document.querySelector('#mode-toggle i');
+      const label = document.querySelector('#mode-toggle');
+      if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode"); body.classList.add("light-mode");
+        icon.className = "fas fa-sun"; label.innerHTML = '<i class="fas fa-sun"></i> وضع نهاري';
+      } else {
+        body.classList.remove("light-mode"); body.classList.add("dark-mode");
+        icon.className = "fas fa-moon"; label.innerHTML = '<i class="fas fa-moon"></i> وضع مظلم';
+      }
+    }
+  </script>
+</body>
+</html>

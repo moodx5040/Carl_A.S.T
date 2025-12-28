@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="refresh" content="200">
+  <link rel="icon" href="لوغو%20.jpg" type="image/png">
+  <title>إنجازات إقليم سايلنس 💎</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* =================== */
+    /* == ألوان كرستالية == */
+    /* =================== */
+
+    :root {
+      --main-crystal: #4dd0e1;
+      --hover-crystal: #81d4fa;
+      --dark-bg: #0a1f2c;
+      --card-bg: #0d3c4a;
+      --card-hover-bg: #147c96;
+      --card-border: #4dd0e1;
+      --card-hover-border: #81d4fa;
+      --text-muted: #cce7f0;
+      --footer-text: #cce7f0;
+      --footer-border: #4dd0e1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--main-crystal);
+      transition: all 0.4s ease;
+    }
+
+    .dark-mode {background-color: var(--dark-bg); color: var(--main-crystal);}
+    .light-mode {background-color: #e0f7fa; color: #004d40;}
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(to bottom, #0a1f2c 60%, #0d3c4a);
+      border-bottom: 3px solid var(--main-crystal);
+      box-shadow: 0 4px 10px rgba(77, 208, 225, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--main-crystal);
+    }
+
+    header p {margin-top: 15px; font-size: 1.2em; max-width: 800px; margin-left:auto; margin-right:auto; color:#cce7f0;}
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      padding: 10px 18px;
+      background-color: var(--main-crystal);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(77, 208, 225, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toggle-mode:hover {background-color: var(--hover-crystal); transform: scale(1.05);}
+
+    .container {max-width: 1200px; margin: auto; padding: 40px 20px;}
+
+    .intro-section {text-align: center; margin-bottom: 60px; padding: 0 20px;}
+    .intro-section h2 {font-size: 2.2em; color: var(--main-crystal); margin-bottom: 20px;}
+    .intro-text {font-size: 1.1em; max-width: 800px; margin:auto; color: #cce7f0; line-height:1.7;}
+
+    .achievement-category {text-align: center; margin-bottom: 50px;}
+    .achievement-category h2 {font-size: 2em; margin-bottom: 20px; color: var(--main-crystal);}
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .achievement-card {
+      background-color: var(--card-bg);
+      border: 2px solid var(--card-border);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(77, 208, 225, 0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-6px);
+      background-color: var(--card-hover-bg);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 8px 20px rgba(77, 208, 225, 0.2);
+    }
+
+    .achievement-icon {font-size: 2.5em; color: var(--main-crystal); margin-bottom: 15px;}
+    .achievement-title {font-size: 1.4em; color: var(--main-crystal); margin:0;}
+    .achievement-desc {margin-top: 10px; font-size:0.95em; color: var(--text-muted);}
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: var(--footer-text);
+      border-top: 1px solid var(--footer-border);
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    footer img {width:22px; height:22px;}
+
+    .home-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--main-crystal);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(77, 208, 225, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .home-button:hover {background-color: var(--hover-crystal); transform: scale(1.05);}
+  </style>
+</head>
+<body class="dark-mode" data-aos-easing="ease" data-aos-duration="600" data-aos-delay="0">
+  <header>
+    <h1>إقليم سايلنس</h1>
+    <p>الإنجازات التي حققها قاليمنا حتى الآن!</p>
+    <div style="margin-top:20px;">
+      <a href="index.html" class="home-button"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+    </div>
+  </header>
+
+  <button class="toggle-mode" onclick="toggleMode()" id="mode-toggle">
+    <i class="fas fa-moon"></i> وضع مظلم
+  </button>
+
+  <div class="container">
+    <div class="intro-section" data-aos="fade-up">
+      <h2>🏆 إنجازات إقليم سايلنس ا</h2>
+      <p class="intro-text">
+        منذ شهر 10 لعام 2025، حققت إقليم سايلنس الإنجازات التالية: من النمو السريع إلى بناء مجتمع قوي ومتماسك، كل إنجاز يُكتب بذهب على صفحات تاريخ الاقليم.
+      </p>
+    </div>
+
+    <div class="achievement-category" data-aos="fade-up">
+      <h2>🏅 إنجازات الاقليم</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card" data-aos="fade-up">
+          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+          <h3 class="achievement-title">6 نقابات</h3>
+          <p class="achievement-desc"> إقليم سايلنس فتح من شهر 10 عام 2025 وبخلاص شهرين فقط قدر أن ينمو بسرعه هائلة! واول نقابة افتتحت بالاقليم هي موسكو</p>
+        </div>
+
+        <div class="achievement-card" data-aos="fade-up">
+          <div class="achievement-icon"><i class="fas fa-crown"></i></div>
+          <h3 class="achievement-title">بطولات المملكة</h3>
+          <p class="achievement-desc">فوز اسبادا ببطولة عاصمة المملكة وليس فقط الاقليم، فوز على اكثر من 50 نقابة !!</p>
+        </div>
+
+        <div class="achievement-card" data-aos="fade-up">
+          <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+          <h3 class="achievement-title">أفضل اقليم من حيث القوانين</h3>
+          <p class="achievement-desc">نظام قوي أثبت استحقاقه على مدة الوقت القصير وقوانين صارمة وأثبت ذالك بإدارة سوبارو</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <img src="كارل.png" alt="شعار">
+    <span>&copy; 2025 إقليم سايلنس - جميع الحقوق محفوظة كارل</span>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMode() {
+      const body = document.body;
+      const icon = document.querySelector('#mode-toggle i');
+      const label = document.querySelector('#mode-toggle');
+
+      if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        icon.className = "fas fa-sun";
+        label.innerHTML = '<i class="fas fa-sun"></i> وضع نهاري';
+      } else {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        icon.className = "fas fa-moon";
+        label.innerHTML = '<i class="fas fa-moon"></i> وضع مظلم';
+      }
+    }
+  </script>
+</body>
+</html>
